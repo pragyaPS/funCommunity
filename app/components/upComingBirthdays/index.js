@@ -28,11 +28,6 @@ class UpComingBirthdays extends Component{
   }
 
   componentWillMount() {
-    // birthdayRef.push().set({
-    //   date: '02',
-    //   name: 'Pragya',
-    //   month: '8',
-    // })
     birthdayRef.on('value', (snap) => {
       let items = [];
       let birthdays = groupBy( snap.val(), 'month' );
